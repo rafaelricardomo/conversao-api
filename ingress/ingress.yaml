@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-conversao-api  
+spec:
+  rules:
+  - host: api.conversao.com.br
+    http:
+      paths: 
+      - pathType: Prefix
+        path: "/"  
+        backend:  
+          service:          
+            name: conversao-api-service
+            port: 
+              number: 80
+
