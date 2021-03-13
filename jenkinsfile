@@ -11,7 +11,7 @@ pipeline {
             steps {
                 script {
                     dockerapp = docker.build("rafaelricardomo/conversao-api:v${env.BUILD_ID}",
-                    '-f ./Conversao.Api/Dockerfile ')
+                    '-f ./Conversao.Api/Dockerfile ./conversao-api/')
                 }
                 
             }
