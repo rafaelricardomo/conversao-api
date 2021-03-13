@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout scm') {
             steps {
-                git url:'https://github.com/rafaelricardomo/conversao-api.git', branch:'master'
+                git url:'https://github.com/rafaelricardomo/conversao-api.git', branch:'main'
             }
         }
     
